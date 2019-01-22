@@ -6,7 +6,7 @@ export default class GetReady extends React.Component {
   render() {
     return(
       <View>
-        <Text>Get REady</Text>
+        <Text>Hi {this.props.user}</Text>
       </View>
     )
   }

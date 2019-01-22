@@ -13,13 +13,18 @@ export default class App extends React.Component {
       user: '',
       screen: 'Home'
     }
-    this.goGetReady = this.goGetReady.bind(this)
+    this.goGetReady = this.goGetReady.bind(this);
+    this.setUser = this.setUser.bind(this);
+  }
+
+  setUser(data) {
+    this.setState({user:data})
   }
   
   setScreen() {
     switch (this.state.screen) {
-      case 'Home' : return (< Home goGetReady={this.goGetReady}/>);
-      case 'GetReady' : return ( < GetReady />);
+      case 'Home' : return (< Home goGetReady={this.goGetReady} setUser={this.setUser}/>);
+      case 'GetReady' : return ( < GetReady user={this.state.user}/>);
       default: return ( < Home />);
     }
   }

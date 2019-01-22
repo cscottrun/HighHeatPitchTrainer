@@ -6,16 +6,23 @@ let animatedPitch = 'https://media.giphy.com/media/26uf5cDsuoH8RMhd6/giphy.gif'
 let lightTunnel = 'https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3OTIzNTgwNDExNjUxNzMw/who-determined-the-speed-of-lights-featured-photo.jpg'
 let baseball = 'https://www.clipartmax.com/png/middle/44-440873_baseball-ball-clip-art-baseball-clipart-transparent-background.png'
 
-
-// need to pass up user to App
+// on submit i want push user to App and then navigate to the next page
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {user: ''};
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  
 
+  handleSubmit (e) {
+    e.preventDefault;
+    this.props.setUser(this.state.user);
+    this.setState({user:''});
+    this.props.goGetReady();
+  }
+  
   render() {
     let background = {uri: lightTunnel};
     let ballPic = {uri: baseball}
@@ -34,7 +41,7 @@ export default class App extends React.Component {
 
         <TouchableOpacity
          style={styles.button}
-         onPress={this.props.goGetReady}>
+         onPress={this.handleSubmit}>
           <Text style={{color:'white'}}> Submit </Text>
         </TouchableOpacity>
 

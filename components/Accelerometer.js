@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { Accelerometer } from 'expo';
 
 export default class AccelerometerSensor extends React.Component {

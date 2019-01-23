@@ -14,8 +14,8 @@ export default class App extends React.Component {
     super(props);
     this.state= {
       user: '',
-      score: 'yoyo',
-      screen: 'Play'
+      score: null,
+      screen: 'Home'
     }
     this.goGetReady = this.goGetReady.bind(this);
     this.goPlay = this.goPlay.bind(this);

@@ -16,7 +16,7 @@ export default class Results extends React.Component {
         <View style={styles.container}>
           <Text style={[styles.header, styles.whiteText]}>Great Pitch!</Text>
           <Text style={[styles.whiteText, styles.p]}>You Pitched</Text>
-          <Text style={[styles.header, styles.whiteText]}>50</Text>
+          <Text style={[styles.header, styles.whiteText]}>{this.props.score}</Text>
 
 
         <TouchableOpacity

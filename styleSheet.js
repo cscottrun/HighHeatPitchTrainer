@@ -2,10 +2,32 @@
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header: {
+    fontWeight: 'bold',
+    fontSize: 70,
+  },
+  whiteText: {
+    color: '#fff'
+  },
+  p: {
+    fontSize: 20,
+  },
+  textTopMargin: {
+    lineHeight: 90,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: 'black',
+    padding: 10,
+    margin: 20,
+    borderRadius: 5
+  },
+
+
+
 }
 
 module.exports = styles;

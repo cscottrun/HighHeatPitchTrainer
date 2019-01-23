@@ -24,7 +24,6 @@ export default class Play extends React.Component {
     
   }
 
-  
   render() {
     if (this.state.count === 0) {
       {this.props.goPitch()}

@@ -66,7 +66,6 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        
         {this.setScreen()}
       </View>
     );

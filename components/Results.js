@@ -14,22 +14,22 @@ export default class Results extends React.Component {
         style={{width: '100%', height: '100%'}}>
 
         <View style={styles.container}>
+
           <Text style={[styles.header, styles.whiteText]}>Great Pitch!</Text>
           <Text style={[styles.whiteText, styles.p]}>You Pitched</Text>
           <Text style={[styles.header, styles.whiteText]}>{this.props.score}</Text>
 
+          <TouchableOpacity
+          style={styles.buttonWhite}
+          onPress={this.props.goGetReady}>
+            <Text > Play Again </Text>
+          </TouchableOpacity>
 
-        <TouchableOpacity
-         style={styles.buttonWhite}
-         onPress={this.props.goGetReady}>
-          <Text > Play Again </Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-         style={styles.buttonWhite}
-         onPress={this.props.goHome}>
-          <Text > SignOut </Text>
-        </TouchableOpacity>
+          <TouchableOpacity
+          style={styles.buttonWhite}
+          onPress={this.props.goHome}>
+            <Text > SignOut </Text>
+          </TouchableOpacity>
 
         </View>
 

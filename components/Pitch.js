@@ -67,12 +67,10 @@ export default class Pitch extends React.Component {
     if (!this.state.score) {
       return (
         <View style={styles.sensor}>
-
-      
-          <Text>x: {this.state.x.length}}</Text>
+          {/* <Text>x: {this.state.x}}</Text> */}
           <Text>y: {this.state.y}}</Text>
-          <Text>z: {this.state.z}}</Text>
-          <Text>score: {this.state.score}}</Text>
+          {/* <Text>z: {this.state.z}}</Text> */}
+          {/* <Text>score: {this.state.score}}</Text> */}
 
           <View style={styles.buttonContainer}>
             <TouchableOpacity onPress={this._toggle} style={styles.button}>
@@ -86,21 +84,17 @@ export default class Pitch extends React.Component {
         </View>
       );
     } 
-    
    
-      else if (this.state.score) {
-        return (
-          <View>
-            {this.handleSubmit()}
-          </View>
-
-        )
-  
-      }
+    else if (this.state.score) {
+      return (
+        <View>
+          {this.handleSubmit()}
+        </View>
+      )
+    }
     
   }
-
-
+  
 }
 
 

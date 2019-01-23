@@ -4,8 +4,6 @@ import styles from '../styleSheet.js';
 
 export default class GetReady extends React.Component {
 
-  
-
   render() {
     return(
       <View style={styles.container}>

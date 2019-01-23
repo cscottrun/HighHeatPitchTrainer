@@ -18,6 +18,8 @@ export default class App extends React.Component {
     this.goGetReady = this.goGetReady.bind(this);
     this.goPlay = this.goPlay.bind(this);
     this.goToResults = this.goToResults.bind(this);
+    this.goHome = this.goHome.bind(this);
+
 
 
     this.setUser = this.setUser.bind(this);
@@ -32,7 +34,7 @@ export default class App extends React.Component {
       case 'Home' : return (< Home goGetReady={this.goGetReady} setUser={this.setUser}/>);
       case 'GetReady' : return ( < GetReady user={this.state.user} goPlay={this.goPlay}/>);
       case 'Play' : return ( < Play goToResults={this.goToResults}/>);
-      case 'Results' : return ( < Results goGetReady={this.goGetReady}/>);
+      case 'Results' : return ( < Results goGetReady={this.goGetReady} goHome={this.goHome}/>);
 
       default: return ( < Home />);
     }
@@ -41,13 +43,14 @@ export default class App extends React.Component {
   goGetReady () {
     this.setState({screen:'GetReady'})
   }
-
   goPlay () {
     this.setState({screen:'Play'})
   }
-
   goToResults () {
     this.setState({screen:'Results'})
+  }
+  goHome () {
+    this.setState({screen:'Home'})
   }
 
   render() {

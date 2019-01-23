@@ -15,14 +15,20 @@ export default class Results extends React.Component {
 
         <View style={styles.container}>
           <Text style={[styles.header, styles.whiteText]}>Great Pitch!</Text>
-          <Text style={[styles.whiteText, styles.p, styles.textTopMargin]}>You Pitched</Text>
+          <Text style={[styles.whiteText, styles.p]}>You Pitched</Text>
           <Text style={[styles.header, styles.whiteText]}>50</Text>
 
 
         <TouchableOpacity
-         style={styles.button}
+         style={styles.buttonWhite}
          onPress={this.props.goGetReady}>
-          <Text style={{color:'white'}}> Play Again </Text>
+          <Text > Play Again </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+         style={styles.buttonWhite}
+         onPress={this.props.goHome}>
+          <Text > SignOut </Text>
         </TouchableOpacity>
 
         </View>

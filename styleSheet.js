@@ -14,9 +14,17 @@ const styles = {
   },
   p: {
     fontSize: 20,
+    fontWeight: 'bold'
   },
   textTopMargin: {
     lineHeight: 90,
+  },
+  buttonWhite: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    padding: 10,
+    margin: 20,
+    borderRadius: 5
   },
   button: {
     alignItems: 'center',

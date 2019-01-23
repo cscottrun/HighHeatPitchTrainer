@@ -40,9 +40,9 @@ export default class App extends React.Component {
           onChangeText={(user) => this.setState({user})}/>
 
         <TouchableOpacity
-         style={styles.button}
+         style={styles.buttonWhite}
          onPress={this.handleSubmit}>
-          <Text style={{color:'white'}}> Submit </Text>
+          <Text style={{color:'black'}}> Submit </Text>
         </TouchableOpacity>
 
         </View>

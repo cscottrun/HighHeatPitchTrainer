@@ -7,7 +7,7 @@ You're an athlete. Your goal is to optimize your pitch. You're training 24/7 and
 
 HighHeat is a mobile application for training world-class pitchers. With your phone held firmly in your hand, practice your pitch and see your results. HighHeat will report back on your pitch speed, providing you the feedback needed for maximum improvement.
 
-[![Watch the video](http://i3.ytimg.com/vi/0B5VVJ3iKDg/hqdefault.jpg)](https://youtu.be/0B5VVJ3iKDg)
+[![Watch the video](picurl)](video url)
 
 ### To Use This App
 * Install Expo Client on your smartphone. Can be found in App store or Google Play Store

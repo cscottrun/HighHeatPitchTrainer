@@ -1,9 +1,11 @@
 import React from 'react';
 import { Text, View ,TouchableOpacity} from 'react-native';
 import styles from './styleSheet.js'
+import Accelerometer from './components/Accelerometer'
 import Home from './components/Home'
 import GetReady from './components/GetReady'
-import Accelerometer from './components/Accelerometer'
+import Play from './components/Play'
+import Results from './components/Results'
 
 
 export default class App extends React.Component {
@@ -14,6 +16,10 @@ export default class App extends React.Component {
       screen: 'Home'
     }
     this.goGetReady = this.goGetReady.bind(this);
+    this.goPlay = this.goPlay.bind(this);
+    this.goToResults = this.goToResults.bind(this);
+
+
     this.setUser = this.setUser.bind(this);
   }
 
@@ -24,7 +30,10 @@ export default class App extends React.Component {
   setScreen() {
     switch (this.state.screen) {
       case 'Home' : return (< Home goGetReady={this.goGetReady} setUser={this.setUser}/>);
-      case 'GetReady' : return ( < GetReady user={this.state.user}/>);
+      case 'GetReady' : return ( < GetReady user={this.state.user} goPlay={this.goPlay}/>);
+      case 'Play' : return ( < Play goToResults={this.goToResults}/>);
+      case 'Results' : return ( < Results goGetReady={this.goGetReady}/>);
+
       default: return ( < Home />);
     }
   }
@@ -33,10 +42,17 @@ export default class App extends React.Component {
     this.setState({screen:'GetReady'})
   }
 
+  goPlay () {
+    this.setState({screen:'Play'})
+  }
+
+  goToResults () {
+    this.setState({screen:'Results'})
+  }
+
   render() {
     return (
       <View style={styles.container}>
-    
         {this.setScreen()}
       </View>
     );

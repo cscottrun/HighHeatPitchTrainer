@@ -33,6 +33,7 @@ export default class App extends React.Component {
 
         <View style={styles.container}>
           <Text style={[styles.header, styles.whiteText]}>High Heat</Text>
+          <Text style={[styles.whiteText, styles.p]}>Portable Pitch Trainer</Text>
           <Text style={[styles.whiteText, styles.p, styles.textTopMargin]}>Please sign in</Text>
           <TextInput
           style={[styles.p, styles.whiteText, {borderColor: 'gray'}]}

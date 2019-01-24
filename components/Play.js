@@ -4,6 +4,7 @@ import styles from '../styleSheet.js';
 import Pitch from './Pitch'
 
 
+// PROPS - goPitch={this.goPitch}
 export default class Play extends React.Component {
   constructor(props) {
     super(props);
@@ -23,10 +24,9 @@ export default class Play extends React.Component {
     
   }
 
-  
   render() {
     if (this.state.count === 0) {
-      return < Pitch goToResults={this.props.goToResults}/>
+      {this.props.goPitch()}
     }
     return (
       <Text style={styles.header}>{this.state.count}</Text>
